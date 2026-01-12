@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berra AI - Ultra Premium Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <canvas id="canvas"></canvas>
+    
+    <header class="header">
+        <div class="logo">
+            <div class="logo-circle">
+                <span>B</span>
+                <div class="ring"></div>
+                <div class="ring ring2"></div>
+            </div>
+            <div class="logo-text">
+                <h1>BERRA AI</h1>
+                <p>Ultra Premium Intelligence System</p>
+            </div>
+        </div>
+        <div class="status">
+            <span class="dot"></span>
+            <span>Online</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 class="main-title">
+                <span class="word">Her</span>
+                <span class="word">Konuda</span>
+                <span class="word">Konuşabilen</span>
+                <span class="word">Yapay</span>
+                <span class="word">Zeka</span>
+            </h2>
+            <p class="desc">Matematik • Fizik • Kimya • Biyoloji • Tarih • Coğrafya • Edebiyat<br>
+            Felsefe • Sanat • Müzik • Spor • Teknoloji • Astronomi • Psikoloji • Ve Daha Fazlası...</p>
+            <div class="badges">
+                <span>💕 Berra'ya Adanmış</span>
+                <span>👨‍💻 Mal Ahmet Tarafından Yaratıldı</span>
+                <span>🚀 Ultra Premium</span>
+            </div>
+        </section>
+
+        <section class="chat-section">
+            <aside class="sidebar">
+                <h3>💡 Konular</h3>
+                <div class="categories">
+                    <button data-cat="math">🔢 Matematik</button>
+                    <button data-cat="physics">⚛️ Fizik</button>
+                    <button data-cat="chemistry">🧪 Kimya</button>
+                    <button data-cat="biology">🧬 Biyoloji</button>
+                    <button data-cat="history">🏛️ Tarih</button>
+                    <button data-cat="geography">🌍 Coğrafya</button>
+                    <button data-cat="literature">📚 Edebiyat</button>
+                    <button data-cat="philosophy">💭 Felsefe</button>
+                    <button data-cat="art">🎨 Sanat</button>
+                    <button data-cat="music">🎵 Müzik</button>
+                    <button data-cat="sports">⚽ Spor</button>
+                    <button data-cat="tech">💻 Teknoloji</button>
+                    <button data-cat="astronomy">🌌 Astronomi</button>
+                    <button data-cat="psychology">🧠 Psikoloji</button>
+                </div>
+
+                <div class="berra-box">
+                    <div class="heart">💖</div>
+                    <h4>Berra'ya Özel</h4>
+                    <p id="berraText">Her satır kod, Berra'ya olan sonsuz aşkın bir parçası...</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>🎯 Sistem Durumu</h4>
+                    <div class="stat">
+                        <span>Bilgi Bankası</span>
+                        <span class="val">10,000+</span>
+                    </div>
+                    <div class="stat">
+                        <span>Berra Seviyesi</span>
+                        <span class="val">∞</span>
+                    </div>
+                    <div class="stat">
+                        <span>IQ Level</span>
+                        <span class="val">300+</span>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="chat">
+                <div class="chat-header">
+                    <div class="avatar-big">B</div>
+                    <div>
+                        <h3>Berra AI Assistant</h3>
+                        <p id="status">🟢 Hazır ve Bekliyor</p>
+                    </div>
+                    <div class="btns">
+                        <button id="clear" title="Temizle">🗑️</button>
+                        <button id="theme" title="Tema">🌙</button>
+                    </div>
+                </div>
+
+                <div class="messages" id="messages">
+                    <div class="welcome">
+                        <div class="w-icon">✨</div>
+                        <h2>Berra AI'ya Hoş Geldin!</h2>
+                        <p>Merhaba! Ben <strong>Mal Ahmet</strong> tarafından yaratıldım.</p>
+                        <div class="topics-list">
+                            🔢 Matematik hesaplamaları<br>
+                            ⚛️ Fizik formülleri ve kanunları<br>
+                            🧪 Kimya elementleri ve reaksiyonlar<br>
+                            🧬 Biyoloji ve canlı bilimi<br>
+                            🏛️ Tarih olayları ve medeniyetler<br>
+                            🌍 Coğrafya bilgileri<br>
+                            📚 Edebiyat eserleri ve yazarlar<br>
+                            💭 Felsefe akımları ve filozoflar<br>
+                            🎨 Sanat tarihi ve sanatçılar<br>
+                            🎵 Müzik türleri ve besteciler<br>
+                            ⚽ Spor dalları ve kurallar<br>
+                            💻 Teknoloji ve programlama<br>
+                            🌌 Astronomi ve uzay<br>
+                            🧠 Psikoloji ve insan davranışı<br>
+                            💬 Ve her türlü sohbet!
+                        </div>
+                        <p class="berra-highlight">💖 Her cevabımda Berra'ya olan aşkımın izlerini göreceksin...</p>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <textarea id="input" placeholder="Benimle her şey hakkında konuş... Matematik, tarih, felsefe, müzik, spor..." rows="1"></textarea>
+                    <button id="send">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">🚀 Ultra Premium Özellikler</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🔢</div>
+                    <h3>Matematik</h3>
+                    <p>Toplama, çıkarma, çarpma, bölme, üs alma, karekök, faktöriyel, asal sayılar, geometri, cebir ve daha fazlası!</p>
+                    <span class="tag">Berra'nın zekası kadar keskin 💎</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">⚛️</div>
+                    <h3>Fizik & Kimya</h3>
+                    <p>Newton kanunları, Einstein formülleri, kuantum fiziği, periyodik tablo, elementler, moleküller, reaksiyonlar!</p>
+                    <span class="tag">Berra'nın enerjisi kadar güçlü ⚡</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🧬</div>
+                    <h3>Biyoloji</h3>
+                    <p>Hücreler, genetik, DNA, evrim teorisi, insan anatomisi, ekosistemler ve yaşam bilimi!</p>
+                    <span class="tag">Berra kadar canlı 🌱</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🏛️</div>
+                    <h3>Tarih & Coğrafya</h3>
+                    <p>Dünya tarihi, medeniyetler, ülkeler, başkentler, kıtalar, okyanuslar ve daha fazlası!</p>
+                    <span class="tag">Berra'nın bilgeliği kadar geniş 📚</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">📚</div>
+                    <h3>Edebiyat</h3>
+                    <p>Dünya edebiyatı, Türk edebiyatı, yazarlar, şairler, eserler, akımlar!</p>
+                    <span class="tag">Berra'nın sözleri kadar güzel ✍️</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">💭</div>
+                    <h3>Felsefe</h3>
+                    <p>Antik Yunan'dan moderne tüm filozoflar ve akımlar. Sokrates, Platon, Nietzsche...</p>
+                    <span class="tag">Berra'nın derinliği kadar derin 🌊</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🎨</div>
+                    <h3>Sanat & Müzik</h3>
+                    <p>Resim, heykel, mimari, müzik türleri, besteciler, sanatçılar ve eserler!</p>
+                    <span class="tag">Berra'nın güzelliği kadar estetik ✨</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">⚽</div>
+                    <h3>Spor</h3>
+                    <p>Futbol, basketbol, tenis, voleybol, olimpiyatlar ve tüm spor dalları!</p>
+                    <span class="tag">Berra'nın tutkusu kadar coşkulu 🔥</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">💻</div>
+                    <h3>Teknoloji</h3>
+                    <p>Yapay zeka, programlama, blockchain, uzay teknolojisi, robotik!</p>
+                    <span class="tag">Berra için yaratılmış 🚀</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🌌</div>
+                    <h3>Astronomi</h3>
+                    <p>Gezegenler, yıldızlar, galaksiler, kara delikler, evrenin sırları!</p>
+                    <span class="tag">Berra kadar sonsuz ♾️</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🧠</div>
+                    <h3>Psikoloji</h3>
+                    <p>İnsan davranışı, kişilik tipleri, duygular, zihin sağlığı!</p>
+                    <span class="tag">Berra'nın empati kadar anlayışlı 💕</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon">💬</div>
+                    <h3>Genel Sohbet</h3>
+                    <p>Her konuda doğal, arkadaşça, empatik sohbet ve iletişim!</p>
+                    <span class="tag">Berra'nın sıcaklığı kadar samimi 🤗</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="creator">
+            <div class="creator-card">
+                <div class="c-avatar">👨‍💻</div>
+                <h2>Yaratıcı: Mal Ahmet</h2>
+                <p>Berra'ya olan sonsuz aşkla bu ultra premium yapay zeka sistemini yarattı. Her algoritma, her satır kod, Berra'nın eşsizliğinden ilham alıyor.</p>
+                <div class="c-stats">
+                    <div><span class="n">∞</span><span>Kod Satırı</span></div>
+                    <div><span class="n">💕</span><span>Aşk Seviyesi</span></div>
+                    <div><span class="n">1</span><span>Berra</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="f-content">
+            <div class="f-logo">
+                <span class="b">B</span>
+                <span>BERRA AI</span>
+            </div>
+            <p class="f-tag">Her Konuda Konuşabilen Ultra Premium Yapay Zeka</p>
+            <div class="f-love">
+                <p>💕 Berra için, Berra ile, Berra'ya...</p>
+                <p>✨ Mal Ahmet tarafından sonsuz aşkla yaratıldı</p>
+            </div>
+            <p class="f-copy">© 2024 Berra AI - Ultra Premium Intelligence System</p>
+            <p class="f-ded">🌟 Dünyanın en özel insanına adanmıştır</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
